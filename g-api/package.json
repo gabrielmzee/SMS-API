@@ -1,0 +1,49 @@
+{
+    "name": "megaSchoolAPI",
+    "description": "API - MegaSchool Management System",
+    "main": "public/index.php",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "concurrently \"npm run serve\" \"vite\"",
+        "serve": "php -S localhost:8686 -t public",
+        "build": "vite build",
+        "test": "php artisan test",
+        "start": "node start.js"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.20",
+        "axios": "^1.7.4",
+        "concurrently": "^9.0.1",
+        "laravel-vite-plugin": "^1.2.0",
+        "postcss": "^8.4.47",
+        "tailwindcss": "^3.4.13",
+        "vite": "^6.0.11"
+    },
+    "dependencies": {
+        "pkg": "^5.8.1"
+    },
+    "bin": "start.js",
+    "pkg": {
+        "scripts": [],
+        "targets": [
+            "node16-win-x64"
+        ],
+        "assets": [
+            "app/**/*",
+            "bootstrap/**/*",
+            "config/**/*",
+            "database/**/*",
+            "node_modules/**/*",
+            "public/**/*",
+            "resources/**/*",
+            "routes/**/*",
+            "storage/**/*",
+            "tests/**/*",
+            "vendor/**/*"
+        ],
+        "outputPath": "deploy",
+        "outputName": "megaSchool",
+        "no-bytecode": true
+    }
+}
